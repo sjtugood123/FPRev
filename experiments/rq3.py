@@ -10,7 +10,7 @@ def run(sol, accum_impl: AccumImpl) -> list[float]:
     print(sol.__name__, accum_impl.__class__, accum_impl.n_summands)
     sol(accum_impl)
     times = []
-    for t in range(10):
+    for t in range(2):
         print(f"Run {t}: ", end="")
         time = default_timer()
         sol(accum_impl)
@@ -31,7 +31,7 @@ def rq3():
             execution_times = []
             while True:
                 times = run(sol, TorchGEMM(n, use_gpu))
-                time = sum(times) / 10
+                time = sum(times) / 2
                 print("mean:", time)
                 tested_n.append(n)
                 execution_times.append(time)
@@ -47,7 +47,7 @@ def rq3():
         [["CPU", "GPU"], ["BasicFPRev", "FPRev"]]
     )
     print(df)
-    df.to_csv("outputs/rq3.csv")
+    df.to_csv("/home/xtzhao/FPRev/outputs/rq3.csv")
 
 
 if __name__ == "__main__":

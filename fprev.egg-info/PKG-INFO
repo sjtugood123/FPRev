@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: fprev
+Version: 0.1
+Summary: A tool for revealing floating-point accumulation orders
+Author: Peichen Xie
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: graphviz
+Dynamic: license-file
